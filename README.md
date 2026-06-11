@@ -13,7 +13,7 @@ The built-in database covers all six Skylanders games and every figure type — 
 Your dashboard shows overall completion as a percentage and breaks progress down by game and by element. Tap any stat to drill into the full list. One tap shows every figure you are still missing. Another shows your duplicates.
 
 **A Fan-Built Database**
-307 base figures and 56 named collector variants across all six games:
+Base figures and named collector variants across all six games:
 
 • Spyro's Adventure
 • Giants
