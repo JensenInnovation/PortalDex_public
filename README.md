@@ -1,8 +1,7 @@
 
-PortalDex is an unofficial fan-made collection tracker for Skylanders figures. It is not made by, affiliated with, or endorsed by Activision. If you are looking for the official Skylanders app, please visit Activision's website.
+**PortalDex is an unofficial fan-made collection tracker for Skylanders figures. It is not made by, affiliated with, or endorsed by Activision. If you are looking for the official Skylanders app, please visit Activision's website.**
 
-Need help with the app? Contact klaus@jensen-innovation.com
-——
+**Need help with the app?** Contact klaus@jensen-innovation.com
 
 Keep track of every Skylanders figure you own. Browse the complete catalog, log your collection, watch your completion percentage grow, and never lose track of what you still need — all offline, no account required.
 
