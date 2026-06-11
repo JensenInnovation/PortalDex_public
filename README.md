@@ -3,6 +3,8 @@
 
 **Need help with the app?** Contact klaus@jensen-innovation.com
 
+**Data is not collected from this app.**
+
 Keep track of every Skylanders figure you own. Browse the complete catalog, log your collection, watch your completion percentage grow, and never lose track of what you still need — all offline, no account required.
 
 **Browse the Full Catalog**
