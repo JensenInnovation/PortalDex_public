@@ -1,7 +1,6 @@
 # Android NFC Device Compatibility (MIFARE Classic)
 
-PortalDex reads Skylanders figures via Android's `MifareClassic` API
-([nfc_scanner.dart](../portaldex_flutter/lib/services/nfc_scanner.dart)), authenticating
+PortalDex reads Skylanders figures via Android's `MifareClassic` API authenticating
 sector 0 with a known Key A. Skylanders figures are MIFARE Classic 1K chips, and MIFARE
 Classic's Crypto-1 authentication is only supported by phones whose NFC controller chip
 licenses it (almost always **NXP** controllers). Phones with Broadcom or some Qualcomm NFC
@@ -13,7 +12,12 @@ Source: crowdsourced device reports from the
 the same Android `MifareClassic` API as PortalDex. Neither list below is complete or
 authoritative — it only reflects devices that have actually been tested by someone.
 
-## ✅ Known compatible (MIFARE Classic works)
+## ✅ Tested working with PortalDex (confirmed working by users)
+
+- **Samsung** Galaxy S24, A53
+- **Google** Pixel 7a, Pixel 8a
+
+## ✅ Known compatible (MIFARE Classic works, per MIFARE Classic Tool reports)
 
 - **Google**: Pixel 1 through Pixel 8a, Nexus 6P
 - **Samsung**: Galaxy S3, S7, S8–S24 FE (outside the exceptions below), most A-series
@@ -42,11 +46,4 @@ authoritative — it only reflects devices that have actually been tested by som
   (NX505J), Blackview BV5500 Pro/Plus, Blackview BV8000 Pro, Doogee S60, Jiayu S3,
   Lenovo Vibe P1/P2, Foxconn InFocus M320, Sharp Aquos Zero 2, Sharp SH-02G
 - **iPhone**: all models
-  
 
-## What to tell users
-
-If a phone isn't on either list, the only reliable test is trying a real figure on it.
-The app's in-scan error message already distinguishes "not a genuine figure / bad read"
-from "this hardware may not support MIFARE Classic at all" — see the `reason` branches in
-[nfc_scanner.dart](../portaldex_flutter/lib/services/nfc_scanner.dart).
