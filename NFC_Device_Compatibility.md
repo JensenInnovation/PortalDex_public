@@ -41,6 +41,8 @@ authoritative — it only reflects devices that have actually been tested by som
 - **Other**: BlackBerry Priv, Fairphone 3, Asus Zenfone 2, Nubia Z18, ZTE Nubia Z7 Max
   (NX505J), Blackview BV5500 Pro/Plus, Blackview BV8000 Pro, Doogee S60, Jiayu S3,
   Lenovo Vibe P1/P2, Foxconn InFocus M320, Sharp Aquos Zero 2, Sharp SH-02G
+- **iPhone**: all models
+  
 
 ## What to tell users
 
