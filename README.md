@@ -3,7 +3,7 @@
 
 **Need help with the app?** Contact klaus@jensen-innovation.com
 
-**Data is not collected from this app.**
+**Data is not collected from this app.** See the full [Privacy Policy](PRIVACY.md).
 
 Keep track of every Skylanders figure you own. Browse the complete catalog, log your collection, watch your completion percentage grow, and never lose track of what you still need — all offline, no account required.
 
@@ -38,7 +38,13 @@ Found a figure you still need? Bookmark it to your wishlist in one tap. When you
 Attach free-text notes to any owned figure — where you bought it, its condition, whether it is for trade. Add as many notes as you need.
 
 **Completely Offline**
-No account required. No cloud sync. No subscription. Your collection is stored locally on your iPhone and never leaves your device.
+No account required. No cloud sync. No subscription. Your collection is stored locally on your device and never leaves it.
+
+## Privacy Policy
+
+PortalDex does not collect, transmit, or share your personal data. Your
+collection is stored locally on your device. The full policy is here:
+**[Privacy Policy](PRIVACY.md)**.
 
 ——
 
@@ -46,4 +52,3 @@ DISCLAIMER
 PortalDex is an independent fan app and is not affiliated with, endorsed by, licensed by, or connected to Activision Publishing, Inc. in any way. Skylanders, Spyro, and all related character names, game titles, and marks are trademarks and copyrights of Activision Publishing, Inc. Donkey Kong and Bowser are trademarks of Nintendo Co., Ltd. Crash Bandicoot and Dr. Neo Cortex are trademarks of their respective owners. All rights reserved to their respective owners. This app does not reproduce any game content, artwork, or sound from the Skylanders franchise.
 
 ---
-
