@@ -1,5 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: PortalDex app support
-    url: https://github.com/JensenInnovation/PortalDex_public/issues
-    about: Bugs or questions about the app itself (not prices) belong in the main repo. 
