@@ -1,0 +1,56 @@
+name: Price correction
+description: Report a wrong or missing loose/box price so a maintainer can fix it.
+title: "[price] <figure name>"
+labels: ["price"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the guide accurate! If you're comfortable
+        editing JSON, you can also open a pull request directly — see
+        [CONTRIBUTING.md](../blob/main/public/CONTRIBUTING.md). Otherwise just fill this in.
+  - type: input
+    id: figure
+    attributes:
+      label: Figure
+      description: The name exactly as it appears in the app / prices.json.
+      placeholder: "Double Trouble (Series 2)"
+    validations:
+      required: true
+  - type: input
+    id: key
+    attributes:
+      label: Key (cid_vid), if you know it
+      description: The prices.json key, e.g. 18_10240. Optional but speeds up the fix.
+      placeholder: "18_10240"
+  - type: dropdown
+    id: which
+    attributes:
+      label: Which price is wrong?
+      options:
+        - Loose
+        - Box
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: suggested
+    attributes:
+      label: Suggested value(s) in USD
+      description: Whole US dollars. Use one number per price you're correcting.
+      placeholder: "loose 12, box 24"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where does this figure come from? (a sold listing, PriceCharting, a shop, etc.)
+      placeholder: "https://www.pricecharting.com/game/skylanders/..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Optional context — condition, region, why the current value looks off.
