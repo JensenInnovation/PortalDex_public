@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "generated": "2026-07-25",
   "baseCurrency": "USD",
   "rates": { "USD": 1, "EUR": 0.92, "JPY": 157, "GBP": 0.79, "CNY": 7.25, "AUD": 1.52, "CAD": 1.37, "CHF": 0.89, "HKD": 7.81, "SGD": 1.35, "DKK": 6.87, "SEK": 10.6, "NOK": 10.8, "ISK": 139 },
@@ -141,7 +141,7 @@
     "32_14336": {"name": "Cynder (Phantom)", "loose": 8, "box": 19},
     "32_99102": {"name": "Cynder (Crystal Clear)", "loose": 340, "box": 625},
     "32_99114": {"name": "Cynder (Metallic Purple)", "loose": 300, "box": 600},
-    "100_0": {"name": "Jet-Vac", "loose": 3, "box": 8},
+    "100_0": {"name": "Jet-Vac", "loose": 2, "box": 8},
     "100_5123": {"name": "Jet-Vac (Legendary)", "loose": 7, "box": 14},
     "100_8710": {"name": "Jet-Vac (LightCore)", "loose": 5, "box": 14},
     "100_14336": {"name": "Jet-Vac (Turbo)", "loose": 24, "box": 50},
