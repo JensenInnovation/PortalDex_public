@@ -45,8 +45,8 @@ body:
     id: source
     attributes:
       label: Source
-      description: Where does this figure come from? (a sold listing, PriceCharting, a shop, etc.)
-      placeholder: "https://www.pricecharting.com/game/skylanders/..."
+      description: Where does this figure come from? (a sold listing, a shop, etc.)
+      placeholder: "https://www.ebay.com/..."
     validations:
       required: true
   - type: textarea
