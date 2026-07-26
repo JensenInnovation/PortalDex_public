@@ -1,0 +1,54 @@
+name: Validate prices
+
+# Runs on every change to the price guide. A red check means the edit has a
+# problem the contributor needs to fix before it can be merged.
+#
+# NOTE: this file must live at the REPOSITORY ROOT (.github/workflows/), even
+# though the price guide lives under public/. GitHub only reads workflows,
+# issue templates, and the PR template from the root .github/ folder.
+on:
+  pull_request:
+    paths:
+      - "public/prices.json"
+      - "public/catalog.json"
+      - "public/scripts/validate_prices.py"
+  push:
+    branches: [main]
+    paths:
+      - "public/prices.json"
+      - "public/catalog.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the change
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # need history to compare against the base
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch base prices.json (for the version-bump check)
+        if: github.event_name == 'pull_request'
+        run: |
+          git show "origin/${{ github.base_ref }}:public/prices.json" > base_prices.json \
+            || echo '{}' > base_prices.json
+
+      - name: Validate (pull request)
+        if: github.event_name == 'pull_request'
+        run: >
+          python public/scripts/validate_prices.py
+          --prices public/prices.json
+          --catalog public/catalog.json
+          --base base_prices.json
+
+      - name: Validate (push)
+        if: github.event_name != 'pull_request'
+        run: >
+          python public/scripts/validate_prices.py
+          --prices public/prices.json
+          --catalog public/catalog.json 
