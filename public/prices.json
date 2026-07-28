@@ -1,6 +1,8 @@
 {
   "version": 18,
-  "generated": "2026-07-25",
+  "generated": "2026-07-28",
+  "copyright": "© 2026 Jensen Innovation / PortalDex. All rights reserved.",
+  "license": "Proprietary. The compiled price data is owned by PortalDex (Jensen Innovation). Community-contributed under the Contributor Terms in CONTRIBUTING.md. Any use outside the official PortalDex apps requires a licence from PortalDex. See LICENSE.md.",
   "baseCurrency": "USD",
   "rates": { "USD": 1, "EUR": 0.92, "JPY": 157, "GBP": 0.79, "CNY": 7.25, "AUD": 1.52, "CAD": 1.37, "CHF": 0.89, "HKD": 7.81, "SGD": 1.35, "DKK": 6.87, "SEK": 10.6, "NOK": 10.8, "ISK": 139 },
   "notes": "Community-maintained price guide for PortalDex. Values are indicative (USD), not appraisals. 0 means not priced yet. Edit a number and bump \"version\" + \"generated\".",
