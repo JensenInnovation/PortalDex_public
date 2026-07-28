@@ -10,4 +10,5 @@
 - [ ] I edited only the `loose` / `box` numbers (values are **whole US dollars**).
 - [ ] I did **not** rename, add, or remove any keys or `name` fields.
 - [ ] I bumped `"version"` and updated `"generated"` at the top of `public/prices.json`.
-- [ ] The **Validate prices** check below is green (or I'll fix it if it isn't). 
+- [ ] The **Validate prices** check below is green (or I'll fix it if it isn't).
+- [ ] I have read and agree to the **Contributor Terms** in [CONTRIBUTING.md](../blob/main/public/CONTRIBUTING.md) (my contribution is assigned to PortalDex, which owns the compiled guide).
