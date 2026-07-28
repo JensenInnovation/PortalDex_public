@@ -9,6 +9,10 @@ body:
         Thanks for helping keep the guide accurate! If you're comfortable
         editing JSON, you can also open a pull request directly — see
         [CONTRIBUTING.md](../blob/main/public/CONTRIBUTING.md). Otherwise just fill this in.
+
+        By submitting, you agree to the [Contributor Terms](../blob/main/public/CONTRIBUTING.md):
+        your contribution is assigned to PortalDex, which owns the compiled price guide
+        (see [LICENSE.md](../blob/main/public/LICENSE.md)).
   - type: input
     id: figure
     attributes:
@@ -45,7 +49,7 @@ body:
     id: source
     attributes:
       label: Source
-      description: Where does this figure come from? (a sold listing, a shop, etc.)
+      description: Where does this figure come from? (a sold listing, PriceCharting, a shop, etc.)
       placeholder: "https://www.ebay.com/..."
     validations:
       required: true
