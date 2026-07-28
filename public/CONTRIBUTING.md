@@ -52,3 +52,32 @@ python scripts/validate_prices.py
 These are **indicative** prices to help at a flea market or for a rough
 collection value — not appraisals. Prefer recent **sold** prices over asking
 prices, and cite your source in the issue or PR so others can verify it.
+
+## Contributor Terms (please read before contributing)
+
+The price guide is **owned by PortalDex (Jensen Innovation)** and licensed under
+[LICENSE.md](LICENSE.md). Contributions are welcome, but by submitting one you
+agree to the following so that the compiled guide has a single, clear owner.
+
+By submitting any contribution (an issue, a pull request, or price data in any
+form) you:
+
+1. **Represent** that the contribution is your own work, or that you otherwise
+   have the right to submit it, and that submitting it does not violate anyone
+   else's rights.
+2. **Assign** to PortalDex, to the maximum extent permitted by law, all right,
+   title, and interest (including copyright and any database rights) in your
+   contribution — and, to the extent any such rights cannot be assigned, grant
+   PortalDex a perpetual, worldwide, irrevocable, royalty-free, **exclusive**,
+   sublicensable licence to use, reproduce, modify, publish, and distribute it.
+   The result is that **PortalDex owns the compiled Data** and is the only party
+   that may licence it to others.
+3. **Understand** that contributions are **unpaid and voluntary**, that you will
+   not receive royalties or compensation, and that PortalDex is under no
+   obligation to use your contribution.
+4. **Retain** the right to use the individual facts you personally submitted
+   (e.g. a single figure's price) elsewhere for your own purposes. What you may
+   **not** do is copy or reuse the **compiled guide** (in whole or substantial
+   part) outside the official PortalDex apps without a licence — see LICENSE.md.
+
+If you do not agree to these terms, please do not submit contributions.
