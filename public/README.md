@@ -26,3 +26,16 @@ there is no live fetch. Each `prices.json` carries a `version` and `generated`
 date, both shown in the app so players know how current their guide is.
 
 Prices are **indicative**, not appraisals. `0` means a figure isn't priced yet.
+
+## License & ownership
+
+**Copyright © 2026 Jensen Innovation / PortalDex. All rights reserved.**
+
+This price guide is **proprietary** — see [LICENSE.md](LICENSE.md). It is
+developed openly and improved by the community, but the compiled Data is **owned
+by PortalDex** and is **not** open-source/open-data. It may be used only within
+the official PortalDex apps; any other use requires a written licence from
+PortalDex. Contributions are governed by the Contributor Terms in
+[CONTRIBUTING.md](CONTRIBUTING.md), under which contributors assign their rights
+to PortalDex. The guide is not a copy of, or affiliated with, PriceCharting or
+any commercial database.
