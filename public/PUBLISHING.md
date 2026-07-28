@@ -6,30 +6,39 @@ the app source. This `public/` folder in the private repo is the template for
 that repo's non-data files. The two data files (`prices.json`, `catalog.json`)
 are generated here and copied over.
 
-## One-time setup
+## Repo layout (IMPORTANT)
 
-Create the public repo with this layout:
+PortalDex_public is a multi-purpose public repo (privacy policy, NFC
+compatibility, app README at the root). The price guide lives in a `public/`
+subfolder — but **`.github/` MUST sit at the repository root**, because GitHub
+only reads workflows, issue templates, and the PR template from the root
+`.github/` folder. A `.github/` nested inside `public/` is silently ignored.
 
 ```
 PortalDex_public/
-├── README.md
-├── CONTRIBUTING.md
-├── PUBLISHING.md              (optional; maintainer-only)
-├── prices.json                (from the private repo root)
-├── catalog.json               (from the private repo root)
-├── scripts/
-│   └── validate_prices.py
-└── .github/
-    ├── pull_request_template.md
-    ├── ISSUE_TEMPLATE/
-    │   ├── price_correction.yml
-    │   └── config.yml
-    └── workflows/
-        └── validate-prices.yml
+├── README.md                     (app-level, already present)
+├── PRIVACY.md                    (already present)
+├── .github/                      <-- ROOT (Actions + templates live here)
+│   ├── pull_request_template.md
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── price_correction.yml
+│   │   └── config.yml
+│   └── workflows/
+│       └── validate-prices.yml   (paths point at public/…)
+└── public/                       <-- the price guide
+    ├── README.md
+    ├── CONTRIBUTING.md           (includes Contributor Terms)
+    ├── LICENSE.md                (proprietary data licence)
+    ├── PUBLISHING.md             (maintainer-only)
+    ├── prices.json               (from the private repo root)
+    ├── catalog.json              (from the private repo root)
+    └── scripts/
+        └── validate_prices.py
 ```
 
-Copy everything in this `public/` folder to the repo root, then add the two
-generated data files from the private repo root.
+In this private repo the whole set is staged under `public/` (including
+`public/.github/`) for convenience; when publishing, the `.github/` folder must
+end up at the **public repo root**, not inside `public/`.
 
 ## Each release — sync prices back and forth
 
