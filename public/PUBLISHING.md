@@ -30,8 +30,10 @@ PortalDex_public/
     ├── CONTRIBUTING.md           (includes Contributor Terms)
     ├── LICENSE.md                (proprietary data licence)
     ├── PUBLISHING.md             (maintainer-only)
-    ├── prices.json               (from the private repo root)
-    ├── catalog.json              (from the private repo root)
+    ├── prices.json               (Skylanders; from the private repo root)
+    ├── catalog.json              (generated; from the private repo root)
+    ├── amiibo_prices.json        (amiibo; from the private repo root)
+    ├── amiibo_catalog.json       (generated; from the private repo root)
     └── scripts/
         └── validate_prices.py
 ```
