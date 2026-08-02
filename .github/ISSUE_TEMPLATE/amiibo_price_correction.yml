@@ -1,0 +1,67 @@
+name: Amiibo price correction
+description: Report a wrong or missing amiibo loose/box price (NOT Skylanders).
+title: "[amiibo price] <amiibo name>"
+labels: ["price", "amiibo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For **amiibo** prices only. (Skylanders prices use the separate
+        "Price correction" form.) If you're comfortable editing JSON you can also
+        open a pull request against `public/amiibo_prices.json` — see
+        [CONTRIBUTING.md](../blob/main/public/CONTRIBUTING.md).
+
+        By submitting, you agree to the [Contributor Terms](../blob/main/public/CONTRIBUTING.md):
+        your contribution is assigned to PortalDex, which owns the compiled guides
+        (see [LICENSE.md](../blob/main/public/LICENSE.md)).
+  - type: input
+    id: amiibo
+    attributes:
+      label: Amiibo
+      description: The name exactly as it appears in the app / amiibo_prices.json.
+      placeholder: "Mario (Super Smash Bros.)"
+    validations:
+      required: true
+  - type: input
+    id: series
+    attributes:
+      label: Amiibo series
+      description: Which amiibo series it belongs to (helps disambiguate re-releases).
+      placeholder: "Super Smash Bros."
+  - type: input
+    id: key
+    attributes:
+      label: Key (head_tail), if you know it
+      description: The amiibo_prices.json key = the 8-byte amiibo id as head_tail.
+      placeholder: "0_2"
+  - type: dropdown
+    id: which
+    attributes:
+      label: Which price is wrong?
+      options:
+        - Loose
+        - Box (in box / sealed)
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: suggested
+    attributes:
+      label: Suggested value(s) in USD
+      description: Whole US dollars. One number per price you're correcting.
+      placeholder: "loose 14, box 30"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where does this come from? (a sold listing, a shop, etc.)
+      placeholder: "https://www.ebay.com/..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Optional context — region, condition, why the current value looks off.
