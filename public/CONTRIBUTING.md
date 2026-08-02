@@ -1,10 +1,19 @@
 # Contributing prices
 
-This repo holds the community price guide for **PortalDex**, a Skylanders
-collection tracker. It's a single file, [`prices.json`](prices.json), that lists
-an indicative **loose** and **box** price (in US dollars) for every figure the
-app knows about. The app bundles a snapshot of this file and reads it offline —
+This repo holds the community price guides for **PortalDex**, a toys-to-life
+collection tracker. Each guide lists an indicative **loose** and **box** price
+(in US dollars) per figure. The app bundles a snapshot and reads it offline —
 your changes reach players in the next app release.
+
+- **Skylanders** → [`prices.json`](prices.json) (keyed by `cid_vid`), form
+  **"Price correction"**.
+- **amiibo** → [`amiibo_prices.json`](amiibo_prices.json) (keyed by the amiibo id
+  as `head_tail`), form **"Amiibo price correction"**.
+
+The two guides work identically — pick the one for your toy. Everything below
+uses `prices.json` as the example; for amiibo just use `amiibo_prices.json`
+instead (and its amiibo form). The `catalog.json` / `amiibo_catalog.json` files
+are generated references — don't edit those.
 
 You don't need to be a developer. There are two ways to help.
 
