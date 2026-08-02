@@ -9,9 +9,14 @@ network calls, no tracking).
 
 | File | What it is |
 |------|------------|
-| [`prices.json`](prices.json) | The price guide: one entry per figure, keyed by `cid_vid`, with a `loose` and `box` price in US dollars. **This is the file you edit.** |
-| [`catalog.json`](catalog.json) | Generated reference of every valid `cid_vid` → figure name. Do not edit by hand — it's regenerated from the app catalog. |
-| [`scripts/validate_prices.py`](scripts/validate_prices.py) | The validator that CI runs on every change. |
+| [`prices.json`](prices.json) | The **Skylanders** price guide: one entry per figure, keyed by `cid_vid`, with a `loose` and `box` price in US dollars. **Edit this for Skylanders.** |
+| [`catalog.json`](catalog.json) | Generated reference of every valid Skylanders `cid_vid` → figure name. Do not edit by hand — regenerated from the app catalog. |
+| [`amiibo_prices.json`](amiibo_prices.json) | The **amiibo** price guide, same format, keyed by the 8-byte amiibo id as `head_tail`. **Edit this for amiibo.** |
+| [`amiibo_catalog.json`](amiibo_catalog.json) | Generated reference of every valid amiibo `head_tail` → name. Do not edit by hand. |
+| [`scripts/validate_prices.py`](scripts/validate_prices.py) | The validator that CI runs on every change (both guides). |
+
+Each price file is validated against its own catalog file, so keep them together
+and, when regenerating, update both.
 
 ## Contributing
 
