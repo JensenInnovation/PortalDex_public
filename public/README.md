@@ -13,7 +13,9 @@ network calls, no tracking).
 | [`catalog.json`](catalog.json) | Generated reference of every valid Skylanders `cid_vid` → figure name. Do not edit by hand — regenerated from the app catalog. |
 | [`amiibo_prices.json`](amiibo_prices.json) | The **amiibo** price guide, same format, keyed by the 8-byte amiibo id as `head_tail`. **Edit this for amiibo.** |
 | [`amiibo_catalog.json`](amiibo_catalog.json) | Generated reference of every valid amiibo `head_tail` → name. Do not edit by hand. |
-| [`scripts/validate_prices.py`](scripts/validate_prices.py) | The validator that CI runs on every change (both guides). |
+| [`disney_prices.json`](disney_prices.json) | The **Disney Infinity** price guide, same format, keyed by the INF model number as `model_0`. **Edit this for Disney Infinity.** |
+| [`disney_catalog.json`](disney_catalog.json) | Generated reference of every valid Disney Infinity `model_0` → name. Do not edit by hand. |
+| [`scripts/validate_prices.py`](scripts/validate_prices.py) | The validator that CI runs on every change (all three guides). |
 
 Each price file is validated against its own catalog file, so keep them together
 and, when regenerating, update both.
