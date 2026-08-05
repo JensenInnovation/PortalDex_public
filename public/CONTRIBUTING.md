@@ -9,11 +9,13 @@ your changes reach players in the next app release.
   **"Price correction"**.
 - **amiibo** → [`amiibo_prices.json`](amiibo_prices.json) (keyed by the amiibo id
   as `head_tail`), form **"Amiibo price correction"**.
+- **Disney Infinity** → [`disney_prices.json`](disney_prices.json) (keyed by the
+  INF model number as `model_0`), form **"Disney Infinity price correction"**.
 
-The two guides work identically — pick the one for your toy. Everything below
-uses `prices.json` as the example; for amiibo just use `amiibo_prices.json`
-instead (and its amiibo form). The `catalog.json` / `amiibo_catalog.json` files
-are generated references — don't edit those.
+The three guides work identically — pick the one for your toy. Everything below
+uses `prices.json` as the example; for amiibo or Disney just use the matching
+`*_prices.json` (and its form). The `*_catalog.json` files are generated
+references — don't edit those.
 
 You don't need to be a developer. There are two ways to help.
 
