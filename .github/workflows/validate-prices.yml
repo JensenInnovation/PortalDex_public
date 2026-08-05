@@ -13,6 +13,8 @@ on:
       - "public/catalog.json"
       - "public/amiibo_prices.json"
       - "public/amiibo_catalog.json"
+      - "public/disney_prices.json"
+      - "public/disney_catalog.json"
       - "public/scripts/validate_prices.py"
   push:
     branches: [main]
@@ -21,6 +23,8 @@ on:
       - "public/catalog.json"
       - "public/amiibo_prices.json"
       - "public/amiibo_catalog.json"
+      - "public/disney_prices.json"
+      - "public/disney_catalog.json"
 
 jobs:
   validate:
@@ -63,3 +67,17 @@ jobs:
           --prices public/amiibo_prices.json
           --catalog public/amiibo_catalog.json
           ${{ github.event_name == 'pull_request' && '--base base_amiibo_prices.json' || '' }}
+
+      # ── Disney Infinity guide ─────────────────────────────────────────────
+      - name: Fetch base disney_prices.json (version-bump check)
+        if: github.event_name == 'pull_request'
+        run: |
+          git show "origin/${{ github.base_ref }}:public/disney_prices.json" > base_disney_prices.json \
+            || echo '{}' > base_disney_prices.json
+
+      - name: Validate Disney Infinity prices
+        run: >
+          python public/scripts/validate_prices.py
+          --prices public/disney_prices.json
+          --catalog public/disney_catalog.json
+          ${{ github.event_name == 'pull_request' && '--base base_disney_prices.json' || '' }}
