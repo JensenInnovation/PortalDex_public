@@ -1,0 +1,67 @@
+name: Disney Infinity price correction
+description: Report a wrong or missing Disney Infinity loose/box price (NOT Skylanders/amiibo).
+title: "[disney price] <figure name>"
+labels: ["price", "disney"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For **Disney Infinity** prices only. (Skylanders and amiibo prices use
+        their own separate forms.) If you're comfortable editing JSON you can also
+        open a pull request against `public/disney_prices.json` — see
+        [CONTRIBUTING.md](../blob/main/public/CONTRIBUTING.md).
+
+        By submitting, you agree to the [Contributor Terms](../blob/main/public/CONTRIBUTING.md):
+        your contribution is assigned to PortalDex, which owns the compiled guides
+        (see [LICENSE.md](../blob/main/public/LICENSE.md)).
+  - type: input
+    id: figure
+    attributes:
+      label: Figure
+      description: The name exactly as it appears in the app / disney_prices.json.
+      placeholder: "Jack Sparrow"
+    validations:
+      required: true
+  - type: input
+    id: edition
+    attributes:
+      label: Edition
+      description: Which edition it belongs to (1.0 / 2.0 / 3.0).
+      placeholder: "1.0"
+  - type: input
+    id: key
+    attributes:
+      label: Key (model_0), if you know it
+      description: The disney_prices.json key = the INF model number, then _0.
+      placeholder: "1000003_0"
+  - type: dropdown
+    id: which
+    attributes:
+      label: Which price is wrong?
+      options:
+        - Loose
+        - Box (in box / sealed)
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: suggested
+    attributes:
+      label: Suggested value(s) in USD
+      description: Whole US dollars. One number per price you're correcting.
+      placeholder: "loose 8, box 20"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where does this come from? (a sold listing, a shop, etc.)
+      placeholder: "https://www.pricecharting.com/game/disney-infinity/..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Optional context — region, condition, why the current value looks off.
