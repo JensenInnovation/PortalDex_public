@@ -22,6 +22,8 @@ PortalDex_public/
 │   ├── pull_request_template.md
 │   ├── ISSUE_TEMPLATE/
 │   │   ├── price_correction.yml
+│   │   ├── amiibo_price_correction.yml
+│   │   ├── disney_price_correction.yml
 │   │   └── config.yml
 │   └── workflows/
 │       └── validate-prices.yml   (paths point at public/…)
@@ -34,6 +36,8 @@ PortalDex_public/
     ├── catalog.json              (generated; from the private repo root)
     ├── amiibo_prices.json        (amiibo; from the private repo root)
     ├── amiibo_catalog.json       (generated; from the private repo root)
+    ├── disney_prices.json        (Disney Infinity; from the private repo root)
+    ├── disney_catalog.json       (generated; from the private repo root)
     └── scripts/
         └── validate_prices.py
 ```
@@ -56,6 +60,13 @@ end up at the **public repo root**, not inside `public/`.
    `build_prices.py` preserves all existing prices; it only adds/removes figures
    and refreshes `catalog.json`. It bumps `version` when the figure set changes —
    otherwise bump it yourself if you changed any numbers.
+
+   The parallel guides work the same way, each with its own build script:
+
+   ```bash
+   python scripts/build_amiibo_prices.py   # amiibo_prices.json + amiibo_catalog.json
+   python scripts/build_disney_prices.py   # disney_prices.json + disney_catalog.json
+   ```
 3. **Validate** before shipping:
 
    ```bash
