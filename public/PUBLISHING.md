@@ -24,6 +24,7 @@ PortalDex_public/
 │   │   ├── price_correction.yml
 │   │   ├── amiibo_price_correction.yml
 │   │   ├── disney_price_correction.yml
+│   │   ├── lego_price_correction.yml
 │   │   └── config.yml
 │   └── workflows/
 │       └── validate-prices.yml   (paths point at public/…)
@@ -38,6 +39,8 @@ PortalDex_public/
     ├── amiibo_catalog.json       (generated; from the private repo root)
     ├── disney_prices.json        (Disney Infinity; from the private repo root)
     ├── disney_catalog.json       (generated; from the private repo root)
+    ├── lego_prices.json          (LEGO Dimensions; from the private repo root)
+    ├── lego_catalog.json         (generated; from the private repo root)
     └── scripts/
         └── validate_prices.py
 ```
@@ -66,6 +69,7 @@ end up at the **public repo root**, not inside `public/`.
    ```bash
    python scripts/build_amiibo_prices.py   # amiibo_prices.json + amiibo_catalog.json
    python scripts/build_disney_prices.py   # disney_prices.json + disney_catalog.json
+   python scripts/build_lego_prices.py     # lego_prices.json + lego_catalog.json
    ```
 3. **Validate** before shipping:
 
