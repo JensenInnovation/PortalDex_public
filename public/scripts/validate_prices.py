@@ -46,7 +46,11 @@ REQUIRED_CURRENCIES = {
     "HKD", "SGD", "DKK", "SEK", "NOK", "ISK",
 }
 MAX_PRICE = 100_000          # a single figure over $100k is certainly a typo
-KEY_RE = re.compile(r"^\d+_\d+$")
+# "cid_vid", or "lego_cid_vid" — LEGO Dimensions ids are small (Character_ID
+# ~1-90, Vehicle_ID 1000+) and collide with Skylanders' own characterId range
+# (incl. its Swap Force 1000-1999 top-half ids), so its price keys carry a
+# "lego_" prefix. See scripts/build_lego_prices.py.
+KEY_RE = re.compile(r"^(?:lego_)?\d+_\d+$")
 
 
 class Report:
