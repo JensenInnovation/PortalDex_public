@@ -15,7 +15,9 @@ network calls, no tracking).
 | [`amiibo_catalog.json`](amiibo_catalog.json) | Generated reference of every valid amiibo `head_tail` → name. Do not edit by hand. |
 | [`disney_prices.json`](disney_prices.json) | The **Disney Infinity** price guide, same format, keyed by the INF model number as `model_0`. **Edit this for Disney Infinity.** |
 | [`disney_catalog.json`](disney_catalog.json) | Generated reference of every valid Disney Infinity `model_0` → name. Do not edit by hand. |
-| [`scripts/validate_prices.py`](scripts/validate_prices.py) | The validator that CI runs on every change (all three guides). |
+| [`lego_prices.json`](lego_prices.json) | The **LEGO Dimensions** price guide, same format, keyed as `lego_cid_0` (the "lego_" prefix avoids colliding with Skylanders' own ids). **Edit this for LEGO Dimensions.** |
+| [`lego_catalog.json`](lego_catalog.json) | Generated reference of every valid LEGO Dimensions `lego_cid_0` → name. Do not edit by hand. |
+| [`scripts/validate_prices.py`](scripts/validate_prices.py) | The validator that CI runs on every change (all four guides). |
 
 Each price file is validated against its own catalog file, so keep them together
 and, when regenerating, update both.
