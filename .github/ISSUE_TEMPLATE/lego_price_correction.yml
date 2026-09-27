@@ -1,0 +1,62 @@
+name: LEGO Dimensions price correction
+description: Report a wrong or missing LEGO Dimensions loose/box price (NOT Skylanders/amiibo/Disney).
+title: "[lego price] <item name>"
+labels: ["price", "lego"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For **LEGO Dimensions** prices only. (Skylanders, amiibo and Disney
+        Infinity prices use their own separate forms.) If you're comfortable
+        editing JSON you can also open a pull request against
+        `public/lego_prices.json` — see
+        [CONTRIBUTING.md](../blob/main/public/CONTRIBUTING.md).
+
+        By submitting, you agree to the [Contributor Terms](../blob/main/public/CONTRIBUTING.md):
+        your contribution is assigned to PortalDex, which owns the compiled guides
+        (see [LICENSE.md](../blob/main/public/LICENSE.md)).
+  - type: input
+    id: item
+    attributes:
+      label: Character or vehicle/gadget
+      description: The name exactly as it appears in the app / lego_prices.json.
+      placeholder: "Batman"
+    validations:
+      required: true
+  - type: input
+    id: key
+    attributes:
+      label: Key (lego_cid_0), if you know it
+      description: The lego_prices.json key = "lego_" + the Character_ID or Vehicle_ID + "_0".
+      placeholder: "lego_1_0"
+  - type: dropdown
+    id: which
+    attributes:
+      label: Which price is wrong?
+      options:
+        - Loose
+        - Box (in box / sealed)
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: suggested
+    attributes:
+      label: Suggested value(s) in USD
+      description: Whole US dollars. One number per price you're correcting.
+      placeholder: "loose 8, box 20"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where does this come from? (a sold listing, a shop, etc.)
+      placeholder: "https://www.pricecharting.com/game/lego-dimensions/..."
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Optional context — region, condition, rebuild config, why the current value looks off.
